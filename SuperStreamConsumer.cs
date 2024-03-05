@@ -27,7 +27,7 @@ public class SuperStreamConsumer {
         var consumer = await Consumer.Create(new ConsumerConfig(system, superStreamName)
         {
             IsSuperStream = true, 
-            Reference = "MyApp",
+            Reference = "RabbitMQDotNetClientTest",
             OffsetSpec = new OffsetTypeFirst(),
             MessageHandler = async (stream, consumerSource, context, message) => 
             {
